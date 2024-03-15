@@ -2,10 +2,15 @@ import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
 import { MovieCard } from "../../components/MovieCard";
 import { PageTitle } from "../../components/PageTitle";
+import { useAuth } from "../../hooks/useAuth";
 import { Container } from "./styles";
 import { FaPlus } from "react-icons/fa6";
 
 export function Home() {
+  const { user } = useAuth();
+
+  console.log(user);
+
   return(
     <Container>
       <Header />
